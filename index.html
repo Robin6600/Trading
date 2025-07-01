@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SniperTrader - প্রফেশনাল ট্রেডিং প্ল্যাটফর্ম</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Popup -->
+    <div id="welcomeModal" class="modal welcome-modal">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <div class="welcome-content">
+                <img src="https://live.staticflickr.com/65535/54618712662_699a2eb356_b.jpg" alt="SniperTrader Logo" style="height: 100px; margin-bottom: 1rem;">
+                <h2 data-key="welcome_title">SniperTrader-এ স্বাগতম!</h2>
+                <p data-key="welcome_message">আপনার সফল ট্রেডিং যাত্রার বিশ্বস্ত সঙ্গী।</p>
+                <button id="closeWelcomeBtn" class="cta-button" data-key="welcome_close_btn">শুরু করুন</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Popup -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content animate__animated animate__slideInUp">
+            <button class="close-btn">&times;</button>
+            <div id="contactModalBody">
+                <!-- Contact info will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="https://live.staticflickr.com/65535/54618712662_699a2eb356_b.jpg" alt="SniperTrader Logo" style="height: 40px; margin-right: 10px;">
+                <span data-key="logo_text">SniperTrader</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" data-key="nav_home">হোম</a></li>
+                    <li><a href="#features" data-key="nav_features">ফিচারস</a></li>
+                    <li><a href="#education" data-key="nav_education">এডুকেশন</a></li>
+                    <li><a href="#resources" data-key="nav_resources">রিসোর্স</a></li>
+                    <li><a href="#contact" data-key="nav_contact">যোগাযোগ</a></li>
+                    <li class="lang-switcher-li">
+                        <button id="langBtn" class="lang-btn">EN</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <h1 class="animate-on-scroll" data-key="hero_title">আজই ট্রেডিং শুরু করুন এবং বিশ্বের যেকোনো প্রান্ত থেকে আয় করুন</h1>
+                <p class="animate-on-scroll" data-key="hero_subtitle">আমাদের প্রমাণিত স্ট্র্যাটেজি এবং বিশেষজ্ঞ গাইডেন্স ব্যবহার করে হাজারো সফল ট্রেডারদের সাথে যোগ দিন এবং ফিনান্সিয়াল মার্কেটে আপনার মুনাফা সর্বোচ্চ করুন।</p>
+                <div class="animate-on-scroll">
+                    <a href="https://one.exnesstrack.org/a/z76hwk8dxo" target="_blank" class="cta-button" data-key="create_account_btn">নতুন অ্যাকাউন্ট খুলুন</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <h2 data-key="features_title">কেন SniperTrader বেছে নিবেন?</h2>
+                    <p data-key="features_subtitle">প্রতিযোগিতামূলক ট্রেডিং জগতে সফল হওয়ার জন্য আমাদের প্ল্যাটফর্ম আপনাকে প্রয়োজনীয় সবকিছু সরবরাহ করে।</p>
+                </div>
+                <div class="features-grid">
+                    <!-- Feature items will be populated by script -->
+                </div>
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <h2 data-key="education_title">ট্রেডিং এডুকেশন সেন্টার</h2>
+                    <p data-key="education_subtitle">একজন সফল ট্রেডার হতে, এই বিষয়গুলো ধাপে ধাপে শিখুন এবং অনুশীলন করুন।</p>
+                </div>
+                <div class="education-tabs animate-on-scroll">
+                    <button class="tab-btn active" data-tab="beginner" data-key="tab_beginner">বিগিনার</button>
+                    <button class="tab-btn" data-tab="intermediate" data-key="tab_intermediate">ইন্টারমিডিয়েট</button>
+                    <button class="tab-btn" data-tab="advanced" data-key="tab_advanced">অ্যাডভান্সড</button>
+                    <button class="tab-btn" data-tab="strategies" data-key="tab_strategies">স্ট্র্যাটেজি</button>
+                    <button class="tab-btn" data-tab="psychology" data-key="tab_psychology">সাইকোলজি</button>
+                </div>
+                
+                <div class="tab-content active" id="beginner-tab"></div>
+                <div class="tab-content" id="intermediate-tab"></div>
+                <div class="tab-content" id="advanced-tab"></div>
+                <div class="tab-content" id="strategies-tab"></div>
+                <div class="tab-content" id="psychology-tab"></div>
+            </div>
+        </section>
+
+        <section class="resources" id="resources">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <h2 data-key="resources_title">সহায়ক রিসোর্সসমূহ</h2>
+                    <p data-key="resources_subtitle">Access our collection of tools and resources to enhance your trading experience.</p>
+                </div>
+                <div class="resources-list">
+                     <!-- Resources items will be populated by script -->
+                </div>
+            </div>
+        </section>
+
+        <section class="risk-warning" id="risk">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <h2 data-key="risk_title">ঝুঁকি সতর্কতা এবং দাবিত্যাগ</h2>
+                </div>
+                <div class="warning-grid" id="risk-warning-content">
+                    <!-- Risk items will be populated by script -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column animate-on-scroll">
+                    <h3 data-key="footer_logo_text">SniperTrader</h3>
+                    <p data-key="footer_desc">ট্রেডিং জগতে আপনার বিশ্বস্ত সঙ্গী। আমরা আপনাকে ফিনান্সিয়াল মার্কেটে সফল হতে সাহায্য করার জন্য শিক্ষা, টুলস এবং সাপোর্ট প্রদান করি।</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Snipertraderoriginal" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://t.me/+rPYVSwVjt1FlOTY1" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.youtube.com/@Snipertraderoriginal" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/+8801769930497" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+               
+                <div class="footer-column animate-on-scroll">
+                    <h3 data-key="quick_links">দ্রুত লিঙ্ক</h3>
+                    <ul>
+                        <li><a href="#home">হোম</a></li>
+                        <li><a href="#features">ফিচারস</a></li>
+                        <li><a href="#education">এডুকেশন</a></li>
+                        <li><a href="#resources">রিসোর্স</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column animate-on-scroll">
+                    <h3 data-key="edu_resources">শিক্ষামূলক রিসোর্স</h3>
+                    <ul>
+                        <li><a href="#education">বিগিনার গাইড</a></li>
+                        <li><a href="#education">টেকনিক্যাল অ্যানালাইসিস</a></li>
+                        <li><a href="#education">রিস্ক ম্যানেজমেন্ট</a></li>
+                        <li><a href="#education">ট্রেডিং স্ট্র্যাটেজি</a></li>
+                        <li><a href="#education">মার্কেট সাইকোলজি</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column animate-on-scroll">
+                    <h3 data-key="contact_us">যোগাযোগ করুন</h3>
+                    <div class="contact-icons">
+                        <button class="contact-icon-btn" data-contact="email" aria-label="Email"><i class="fas fa-envelope"></i></button>
+                        <button class="contact-icon-btn" data-contact="phone" aria-label="Phone"><i class="fas fa-phone"></i></button>
+                        <button class="contact-icon-btn" data-contact="address" aria-label="Address"><i class="fas fa-map-marker-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom animate-on-scroll">
+                <p data-key="footer_copyright">© 2024 SniperTrader. সর্বস্বত্ব সংরক্ষিত। ট্রেডিং ঝুঁকিপূর্ণ। শুধুমাত্র সেই পরিমাণ অর্থ ঝুঁকি নিন যা হারাতে আপনি প্রস্তুত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
