@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Untitled</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
@@ -72,21 +62,61 @@
         <section class="hero" id="home">
             <div class="container hero-content">
                 <h1 class="animate-on-scroll" data-key="hero_title">আজই ট্রেডিং শুরু করুন এবং বিশ্বের যেকোনো প্রান্ত থেকে আয় করুন</h1>
-                <p class="animate-on-scroll" data-key="hero_subtitle">আমাদের প্রমাণিত স্ট্র্যাটেজি এবং বিশেষজ্ঞ গাইডেন্স ব্যবহার করে হাজারো সফল ট্রেডারদের সাথে যোগ দিন এবং ফিনান্সিয়াল মার্কেটে আপনার মুনাফা সর্বোচ্চ করুন।</p>
+                <p class="animate-on-scroll" id="rotating-subtitle"></p>
                 <div class="animate-on-scroll">
                     <a href="https://one.exnesstrack.org/a/z76hwk8dxo" target="_blank" class="cta-button" data-key="create_account_btn">নতুন অ্যাকাউন্ট খুলুন</a>
                 </div>
             </div>
         </section>
 
+        <section class="stats-ticker">
+            <div class="container">
+                <div class="stat-item">
+                    <h3 data-key="stats_title">আমাদের সদস্যদের গত ৭ দিনের সম্মিলিত আয়</h3>
+                    <p id="incomeValue" class="income-figure">$0</p>
+                </div>
+            </div>
+        </section>
+        
         <section class="features" id="features">
             <div class="container">
                 <div class="section-title animate-on-scroll">
                     <h2 data-key="features_title">কেন SniperTrader বেছে নিবেন?</h2>
-                    <p data-key="features_subtitle">প্রতিযোগিতামূলক ট্রেডিং জগতে সফল হওয়ার জন্য আমাদের প্ল্যাটফর্ম আপনাকে প্রয়োজনীয় সবকিছু সরবরাহ করে।</p>
+                    <p data-key="features_subtitle">আমাদের প্রমাণিত কৌশল, বিশেষজ্ঞ সাপোর্ট এবং উন্নত টুলস ব্যবহার করে আপনার ট্রেডিং যাত্রাকে পরবর্তী স্তরে নিয়ে যান।</p>
                 </div>
                 <div class="features-grid">
                     </div>
+            </div>
+        </section>
+
+        <section class="trust-section" id="trust">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <h2 data-key="trust_title">আমাদের প্রতিশ্রুতির ভিত্তি</h2>
+                    <p data-key="trust_subtitle">আমরা সর্বোচ্চ মানের সেবা, নিরাপত্তা এবং স্বচ্ছতা প্রদানে অঙ্গীকারবদ্ধ।</p>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-item animate-on-scroll">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 data-key="trust_item_1_title">নিরাপত্তা</h3>
+                        <p data-key="trust_item_1_desc">আপনার ডেটা এবং ট্রেডিং কার্যক্রম সম্পূর্ণ সুরক্ষিত।</p>
+                    </div>
+                    <div class="trust-item animate-on-scroll">
+                        <i class="fas fa-award"></i>
+                        <h3 data-key="trust_item_2_title">মানসম্মত শিক্ষা</h3>
+                        <p data-key="trust_item_2_desc">বিশেষজ্ঞদের দ্বারা তৈরি পরীক্ষিত শিক্ষামূলক উপকরণ।</p>
+                    </div>
+                    <div class="trust-item animate-on-scroll">
+                        <i class="fas fa-users-cog"></i>
+                        <h3 data-key="trust_item_3_title">অবিচল সাপোর্ট</h3>
+                        <p data-key="trust_item_3_desc">যেকোনো প্রয়োজনে আমাদের সাপোর্ট টিম সর্বদা প্রস্তুত।</p>
+                    </div>
+                    <div class="trust-item animate-on-scroll">
+                        <i class="fas fa-chart-line"></i>
+                        <h3 data-key="trust_item_4_title">সফলতার ট্র্যাক রেকর্ড</h3>
+                        <p data-key="trust_item_4_desc">আমাদের স্ট্র্যাটেজিগুলো হাজারো ট্রেডারকে সফল হতে সাহায্য করেছে।</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -153,21 +183,21 @@
                 <div class="footer-column animate-on-scroll">
                     <h3 data-key="quick_links">দ্রুত লিঙ্ক</h3>
                     <ul>
-                        <li><a href="#home">হোম</a></li>
-                        <li><a href="#features">ফিচারস</a></li>
-                        <li><a href="#education">এডুকেশন</a></li>
-                        <li><a href="#resources">রিসোর্স</a></li>
+                        <li><a href="#home" data-key="nav_home">হোম</a></li>
+                        <li><a href="#features" data-key="nav_features">ফিচারস</a></li>
+                        <li><a href="#education" data-key="nav_education">এডুকেশন</a></li>
+                        <li><a href="#resources" data-key="nav_resources">রিসোর্স</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column animate-on-scroll">
                     <h3 data-key="edu_resources">শিক্ষামূলক রিসোর্স</h3>
                     <ul>
-                        <li><a href="#education">বিগিনার গাইড</a></li>
-                        <li><a href="#education">টেকনিক্যাল অ্যানালাইসিস</a></li>
-                        <li><a href="#education">রিস্ক ম্যানেজমেন্ট</a></li>
-                        <li><a href="#education">ট্রেডিং স্ট্র্যাটেজি</a></li>
-                        <li><a href="#education">মার্কেট সাইকোলজি</a></li>
+                        <li><a href="#education" data-key="footer_edu_beginner">বিগিনার গাইড</a></li>
+                        <li><a href="#education" data-key="footer_edu_tech">টেকনিক্যাল অ্যানালাইসিস</a></li>
+                        <li><a href="#education" data-key="footer_edu_risk">রিস্ক ম্যানেজমেন্ট</a></li>
+                        <li><a href="#education" data-key="footer_edu_strategy">ট্রেডিং স্ট্র্যাটেজি</a></li>
+                        <li><a href="#education" data-key="footer_edu_psychology">মার্কেট সাইকোলজি</a></li>
                     </ul>
                 </div>
                 
@@ -188,10 +218,5 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
 </body>
 </html>

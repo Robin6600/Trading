@@ -11,10 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav_resources: "Resources",
                 nav_contact: "Contact",
                 hero_title: "Start Trading Today and Earn from Anywhere in the World",
-                hero_subtitle: "Join thousands of successful traders using our proven strategies and expert guidance to maximize your profits in the financial markets.",
                 create_account_btn: "Create New Account",
                 features_title: "Why Choose SniperTrader?",
-                features_subtitle: "Our platform provides you with everything you need to succeed in the competitive world of trading.",
+                features_subtitle: "Elevate your trading journey with our proven strategies, expert support, and advanced tools.",
                 education_title: "Trading Education Center",
                 education_subtitle: "To become a successful trader, learn and practice these topics step by step.",
                 tab_beginner: "Beginner",
@@ -50,6 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallery_video_desc: "Watch our video tutorials on our YouTube channel to learn visually.",
                 gallery_update_title: "Latest Updates",
                 gallery_update_desc: "Join our Telegram channel to get the latest market updates and signals.",
+                stats_title: "Combined earnings of our members in the last 7 days",
+                trust_title: "The Foundation of Our Commitment",
+                trust_subtitle: "We are committed to providing the highest quality of service, security, and transparency.",
+                trust_item_1_title: "Security",
+                trust_item_1_desc: "Your data and trading activities are completely secure.",
+                trust_item_2_title: "Quality Education",
+                trust_item_2_desc: "Verified educational materials created by experts.",
+                trust_item_3_title: "Unwavering Support",
+                trust_item_3_desc: "Our support team is always ready for any need.",
+                trust_item_4_title: "Track Record of Success",
+                trust_item_4_desc: "Our strategies have helped thousands of traders succeed.",
+                footer_edu_beginner: "Beginner's Guide",
+                footer_edu_tech: "Technical Analysis",
+                footer_edu_risk: "Risk Management",
+                footer_edu_strategy: "Trading Strategies",
+                footer_edu_psychology: "Market Psychology",
             },
             bn: {
                 logo_text: "SniperTrader",
@@ -59,10 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav_resources: "রিসোর্স",
                 nav_contact: "যোগাযোগ",
                 hero_title: "আজই ট্রেডিং শুরু করুন এবং বিশ্বের যেকোনো প্রান্ত থেকে আয় করুন",
-                hero_subtitle: "আমাদের প্রমাণিত স্ট্র্যাটেজি এবং বিশেষজ্ঞ গাইডেন্স ব্যবহার করে হাজারো সফল ট্রেডারদের সাথে যোগ দিন এবং ফিনান্সিয়াল মার্কেটে আপনার মুনাফা সর্বোচ্চ করুন।",
                 create_account_btn: "নতুন অ্যাকাউন্ট খুলুন",
                 features_title: "কেন SniperTrader বেছে নিবেন?",
-                features_subtitle: "প্রতিযোগিতামূলক ট্রেডিং জগতে সফল হওয়ার জন্য আমাদের প্ল্যাটফর্ম আপনাকে প্রয়োজনীয় সবকিছু সরবরাহ করে।",
+                features_subtitle: "আমাদের প্রমাণিত কৌশল, বিশেষজ্ঞ সাপোর্ট এবং উন্নত টুলস ব্যবহার করে আপনার ট্রেডিং যাত্রাকে পরবর্তী স্তরে নিয়ে যান।",
                 education_title: "ট্রেডিং এডুকেশন সেন্টার",
                 education_subtitle: "একজন সফল ট্রেডার হতে, এই বিষয়গুলো ধাপে ধাপে শিখুন এবং অনুশীলন করুন।",
                 tab_beginner: "বিগিনার",
@@ -98,9 +112,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallery_video_desc: "ভিডিও দেখে শিখতে আমাদের ইউটিউব চ্যানেলের টিউটোরিয়ালগুলো দেখুন।",
                 gallery_update_title: "সর্বশেষ আপডেট",
                 gallery_update_desc: "সর্বশেষ মার্কেট আপডেট ও সিগন্যাল পেতে আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন।",
+                stats_title: "আমাদের সদস্যদের গত ৭ দিনের সম্মিলিত আয়",
+                trust_title: "আমাদের প্রতিশ্রুতির ভিত্তি",
+                trust_subtitle: "আমরা সর্বোচ্চ মানের সেবা, নিরাপত্তা এবং স্বচ্ছতা প্রদানে অঙ্গীকারবদ্ধ।",
+                trust_item_1_title: "নিরাপত্তা",
+                trust_item_1_desc: "আপনার ডেটা এবং ট্রেডিং কার্যক্রম সম্পূর্ণ সুরক্ষিত।",
+                trust_item_2_title: "মানসম্মত শিক্ষা",
+                trust_item_2_desc: "বিশেষজ্ঞদের দ্বারা তৈরি পরীক্ষিত শিক্ষামূলক উপকরণ।",
+                trust_item_3_title: "অবিচল সাপোর্ট",
+                trust_item_3_desc: "যেকোনো প্রয়োজনে আমাদের সাপোর্ট টিম সর্বদা প্রস্তুত।",
+                trust_item_4_title: "সফলতার ট্র্যাক রেকর্ড",
+                trust_item_4_desc: "আমাদের স্ট্র্যাটেজিগুলো হাজারো ট্রেডারকে সফল হতে সাহায্য করেছে।",
+                footer_edu_beginner: "বিগিনার গাইড",
+                footer_edu_tech: "টেকনিক্যাল অ্যানালাইসিস",
+                footer_edu_risk: "রিস্ক ম্যানেজমেন্ট",
+                footer_edu_strategy: "ট্রেডিং স্ট্র্যাটেজি",
+                footer_edu_psychology: "মার্কেট সাইকোলজি",
             }
         },
         content: {
+            // === পরিবর্তিত অংশ: নতুন ডাইনামিক সাবটাইটেল লিস্ট ===
+            heroSubtitles: {
+                en: [
+                    "Join thousands of successful traders using our proven strategies and expert guidance.",
+                    "The secret to successful trading is managing your emotions and sticking to your plan.",
+                    "Learn to read the market, not to predict it. Opportunity follows analysis.",
+                    "Patience is a trader's greatest virtue. Wait for the right setup.",
+                    "Risk management is the key to longevity in the trading world.",
+                    "Don't chase losses. Accept small losses to protect your capital for bigger wins.",
+                    "The best traders have no ego. The market is always right.",
+                    "Consistency is more important than big wins. Focus on a steady process."
+                    // আপনি এখানে আরও ইংরেজি উপদেশ যোগ করতে পারেন
+                ],
+                bn: [
+                    "আমাদের প্রমাণিত স্ট্র্যাটেজি এবং বিশেষজ্ঞ গাইডেন্স ব্যবহার করে হাজারো সফল ট্রেডারদের সাথে যোগ দিন।",
+                    "সফল ট্রেডিংয়ের গোপন রহস্য হলো আপনার আবেগ নিয়ন্ত্রণ করা এবং আপনার পরিকল্পনায় লেগে থাকা।",
+                    "বাজারকে পড়তে শিখুন, ভবিষ্যদ্বাণী করতে নয়। সুযোগ বিশ্লেষণকে অনুসরণ করে।",
+                    "ধৈর্য একজন ট্রেডারের সবচেয়ে বড় গুণ। সঠিক সেটআপের জন্য অপেক্ষা করুন।",
+                    "ঝুঁকি ব্যবস্থাপনাই ট্রেডিং জগতে দীর্ঘায়ু লাভের চাবিকাঠি।",
+                    "লোকসানের পিছু ছুটবেন না। বড় লাভের জন্য আপনার মূলধন রক্ষা করতে ছোট লোকসান মেনে নিন।",
+                    "সেরা ট্রেডারদের কোনো অহংকার থাকে না। বাজার সবসময় সঠিক।",
+                    "বড় লাভের চেয়ে ধারাবাহিকতা বেশি গুরুত্বপূর্ণ। একটি স্থির প্রক্রিয়ার উপর মনোযোগ দিন।"
+                    // আপনি এখানে আরও বাংলা উপদেশ যোগ করতে পারেন
+                ]
+            },
             features: {
                 en: [
                     { icon: "fas fa-chart-line", title: "Advanced Analytics", desc: "Access real-time market data, advanced charting tools, and technical indicators for accurate trading decisions." },
@@ -182,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let currentLang = localStorage.getItem('lang') || 'bn';
+    let subtitleInterval; // Global variable for rotator
 
     const dom = {
         html: document.documentElement,
@@ -210,8 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dom.html.lang = lang;
         dom.langBtn.textContent = lang === 'bn' ? 'EN' : 'BN';
 
-        // --- সংশোধিত অংশ শুরু ---
-        // পেজের টাইটেল পরিবর্তনের জন্য সঠিক পদ্ধতি ব্যবহার করা হয়েছে
         const titleElement = document.querySelector('title');
         if (titleElement) {
             const titleKey = titleElement.getAttribute('data-key');
@@ -219,7 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 titleElement.textContent = dataStore.translations[lang][titleKey];
             }
         }
-        // --- সংশোধিত অংশ শেষ ---
 
         dom.translatableElements.forEach(el => {
             const key = el.getAttribute('data-key');
@@ -231,8 +284,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+        
         populateAllDynamicContent();
+        startSubtitleRotation(); // ভাষা পরিবর্তনের পর সাবটাইটেল রোটেটর চালু করুন
     };
+
+    // === পরিবর্তিত অংশ: ইনকাম ট্র্যাকার ফাংশন আপডেট ===
+    const updateIncomeTicker = () => {
+        const incomeValueEl = document.getElementById('incomeValue');
+        if (!incomeValueEl) return;
+
+        const now = new Date();
+        const seed = now.getDate() + (now.getMonth() * 31) + now.getFullYear() + now.getHours();
+
+        let random = Math.sin(seed) * 10000;
+        random = random - Math.floor(random);
+
+        const minIncome = 23000;  // $23k
+        const maxIncome = 120000; // $120k
+        const income = Math.floor(random * (maxIncome - minIncome + 1)) + minIncome;
+
+        incomeValueEl.textContent = `$${income.toLocaleString('en-US')}`;
+    };
+
+    // === নতুন সংযোজিত অংশ: ডাইনামিক সাবটাইটেল রোটেটর ফাংশন ===
+    const startSubtitleRotation = () => {
+        const subtitleEl = document.getElementById('rotating-subtitle');
+        if (!subtitleEl) return;
+
+        if (subtitleInterval) {
+            clearInterval(subtitleInterval);
+        }
+
+        const subtitles = dataStore.content.heroSubtitles[currentLang];
+        let currentIndex = 0;
+
+        subtitleEl.textContent = subtitles[currentIndex];
+        subtitleEl.classList.remove('fade-out');
+
+        subtitleInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % subtitles.length;
+            subtitleEl.classList.add('fade-out');
+
+            setTimeout(() => {
+                subtitleEl.textContent = subtitles[currentIndex];
+                subtitleEl.classList.remove('fade-out');
+            }, 500); // CSS transition এর সাথে সময় মিলান
+
+        }, 5000); // প্রতি ৫ সেকেন্ড পর পরিবর্তন
+    };
+
 
     const populateAllDynamicContent = () => {
         populateFeatures();
@@ -411,6 +512,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- INITIALIZATION ---
     setLanguage(currentLang);
+    
+    updateIncomeTicker(); // পেজ লোড হওয়ার সাথে সাথে ইনকাম দেখান
+    setInterval(updateIncomeTicker, 3600000); // প্রতি ১ ঘণ্টা পর পর আপডেট করুন
 
     if (dom.welcomeModal && !sessionStorage.getItem('welcomeShown')) {
         setTimeout(() => {

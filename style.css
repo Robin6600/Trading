@@ -148,7 +148,17 @@ nav ul li a {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto 2rem;
+    min-height: 60px; /* Ensures space for rotating text */
 }
+
+/* === পরিবর্তিত অংশ: সাবটাইটেল অ্যানিমেশনের জন্য === */
+#rotating-subtitle {
+    transition: opacity 0.5s ease-in-out;
+}
+#rotating-subtitle.fade-out {
+    opacity: 0;
+}
+
 
 .cta-button {
     display: inline-block;
@@ -169,6 +179,29 @@ nav ul li a {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(41, 128, 185, 0.3);
 }
+
+/* === পরিবর্তিত অংশ: Stats Ticker সেকশনের নতুন ডিজাইন === */
+.stats-ticker {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 3px solid #f1c40f;
+    border-bottom: 3px solid #f1c40f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.stat-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.income-figure {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+
 
 /* General Section Styling */
 section {
@@ -223,6 +256,33 @@ section:nth-of-type(even) {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
+
+
+/* Trust Section */
+.trust-section {
+    background-color: #ffffff;
+}
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+.trust-item i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+.trust-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.trust-item p {
+    color: var(--text-secondary-color);
+}
+
 
 /* Trading Education Section */
 .education-tabs {
@@ -410,4 +470,6 @@ footer { background-color: var(--primary-color); color: #bdc3c7; padding: 4rem 0
     .hero h1 { font-size: 2.2rem; }
     .modal-content { width: 90%; margin: 20vh auto; }
     .education-grid, .gallery-grid { grid-template-columns: 1fr; }
+    .stat-item h3 {font-size: 1.2rem;}
+    .income-figure {font-size: 2.8rem;}
 }
