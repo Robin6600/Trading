@@ -254,13 +254,13 @@ section:nth-of-type(even) {
 .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-.education-grid {
+.education-grid, .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
-.education-card {
+.education-card, .gallery-card {
     background-color: white;
     border-radius: var(--border-radius);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -270,25 +270,25 @@ section:nth-of-type(even) {
     padding: 2rem;
 }
 
-.education-card:hover {
+.education-card:hover, .gallery-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.education-card h3 {
+.education-card h3, .gallery-card h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
     display: flex;
     align-items: center;
 }
-.education-card h3 i {
+.education-card h3 i, .gallery-card h3 i {
     color: var(--secondary-color);
     margin-right: 10px;
     font-size: 1.2em;
 }
 
-.education-card p {
+.education-card p, .gallery-card p {
     color: var(--text-secondary-color);
     flex-grow: 1;
 }
@@ -380,6 +380,17 @@ footer { background-color: var(--primary-color); color: #bdc3c7; padding: 4rem 0
 #contactModalBody p, #contactModalBody a { font-size: 1.1rem; color: var(--text-secondary-color); word-break: break-all; text-decoration: none; }
 #contactModalBody a:hover { text-decoration: underline; }
 
+/* Partner Change Page Styles */
+#partner-change-section { padding-top: 120px; padding-bottom: 5rem; }
+.partner-change-content { max-width: 800px; margin: 2rem auto 0; text-align: center; }
+.partner-change-content .login-button { margin-bottom: 3rem; }
+.info-card { background-color: var(--light-color); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 1.5rem; text-align: left; }
+.info-card h3 { margin-bottom: 1rem; color: var(--primary-color); }
+.copy-container { display: flex; gap: 10px; }
+.copy-text { flex-grow: 1; padding: 0.7rem 1rem; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; font-size: 1rem; }
+.copy-btn { padding: 0.7rem 1.5rem; background-color: var(--secondary-color); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background-color 0.3s; }
+.copy-btn:hover { background-color: #2980b9; }
+
 /* Animation Classes */
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
 .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
@@ -398,4 +409,5 @@ footer { background-color: var(--primary-color); color: #bdc3c7; padding: 4rem 0
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
     .modal-content { width: 90%; margin: 20vh auto; }
+    .education-grid, .gallery-grid { grid-template-columns: 1fr; }
 }
