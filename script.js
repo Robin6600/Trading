@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallery_video_desc: "Watch our video tutorials on our YouTube channel to learn visually.",
                 gallery_update_title: "Latest Updates",
                 gallery_update_desc: "Join our Telegram channel to get the latest market updates and signals.",
-                stats_title: "Combined earnings of our members in the last 7 days",
                 trust_title: "The Foundation of Our Commitment",
                 trust_subtitle: "We are committed to providing the highest quality of service, security, and transparency.",
                 trust_item_1_title: "Security",
@@ -112,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallery_video_desc: "ভিডিও দেখে শিখতে আমাদের ইউটিউব চ্যানেলের টিউটোরিয়ালগুলো দেখুন।",
                 gallery_update_title: "সর্বশেষ আপডেট",
                 gallery_update_desc: "সর্বশেষ মার্কেট আপডেট ও সিগন্যাল পেতে আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন।",
-                stats_title: "আমাদের সদস্যদের গত ৭ দিনের সম্মিলিত আয়",
                 trust_title: "আমাদের প্রতিশ্রুতির ভিত্তি",
                 trust_subtitle: "আমরা সর্বোচ্চ মানের সেবা, নিরাপত্তা এবং স্বচ্ছতা প্রদানে অঙ্গীকারবদ্ধ।",
                 trust_item_1_title: "নিরাপত্তা",
@@ -131,7 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         content: {
-            // === পরিবর্তিত অংশ: নতুন ডাইনামিক সাবটাইটেল লিস্ট ===
             heroSubtitles: {
                 en: [
                     "Join thousands of successful traders using our proven strategies and expert guidance.",
@@ -142,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     "Don't chase losses. Accept small losses to protect your capital for bigger wins.",
                     "The best traders have no ego. The market is always right.",
                     "Consistency is more important than big wins. Focus on a steady process."
-                    // আপনি এখানে আরও ইংরেজি উপদেশ যোগ করতে পারেন
                 ],
                 bn: [
                     "আমাদের প্রমাণিত স্ট্র্যাটেজি এবং বিশেষজ্ঞ গাইডেন্স ব্যবহার করে হাজারো সফল ট্রেডারদের সাথে যোগ দিন।",
@@ -153,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     "লোকসানের পিছু ছুটবেন না। বড় লাভের জন্য আপনার মূলধন রক্ষা করতে ছোট লোকসান মেনে নিন।",
                     "সেরা ট্রেডারদের কোনো অহংকার থাকে না। বাজার সবসময় সঠিক।",
                     "বড় লাভের চেয়ে ধারাবাহিকতা বেশি গুরুত্বপূর্ণ। একটি স্থির প্রক্রিয়ার উপর মনোযোগ দিন।"
-                    // আপনি এখানে আরও বাংলা উপদেশ যোগ করতে পারেন
                 ]
             },
             features: {
@@ -237,11 +232,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let currentLang = localStorage.getItem('lang') || 'bn';
-    let subtitleInterval; // Global variable for rotator
+    let subtitleInterval;
 
+    // === পরিবর্তিত অংশ: DOM Elements with Theme Switcher ===
     const dom = {
         html: document.documentElement,
+        body: document.body,
         langBtn: document.getElementById('langBtn'),
+        themeSwitcherBtn: document.getElementById('themeSwitcherBtn'),
         translatableElements: document.querySelectorAll('[data-key]'),
         featuresGrid: document.querySelector('.features-grid'),
         educationSection: document.getElementById('education'),
@@ -258,6 +256,21 @@ document.addEventListener('DOMContentLoaded', () => {
         contactModal: document.getElementById('contactModal'),
         contactModalBody: document.getElementById('contactModalBody'),
         contactModalCloseBtn: document.querySelector('#contactModal .close-btn'),
+    };
+
+    // === নতুন সংযোজিত অংশ: Theme Management ===
+    const setTheme = (theme) => {
+        localStorage.setItem('theme', theme);
+        dom.body.classList.toggle('dark-mode', theme === 'dark');
+        
+        const icon = dom.themeSwitcherBtn.querySelector('i');
+        if (theme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
     };
 
     const setLanguage = (lang) => {
@@ -286,35 +299,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         populateAllDynamicContent();
-        startSubtitleRotation(); // ভাষা পরিবর্তনের পর সাবটাইটেল রোটেটর চালু করুন
+        startSubtitleRotation();
     };
 
-    // === পরিবর্তিত অংশ: ইনকাম ট্র্যাকার ফাংশন আপডেট ===
-    const updateIncomeTicker = () => {
-        const incomeValueEl = document.getElementById('incomeValue');
-        if (!incomeValueEl) return;
-
-        const now = new Date();
-        const seed = now.getDate() + (now.getMonth() * 31) + now.getFullYear() + now.getHours();
-
-        let random = Math.sin(seed) * 10000;
-        random = random - Math.floor(random);
-
-        const minIncome = 23000;  // $23k
-        const maxIncome = 120000; // $120k
-        const income = Math.floor(random * (maxIncome - minIncome + 1)) + minIncome;
-
-        incomeValueEl.textContent = `$${income.toLocaleString('en-US')}`;
-    };
-
-    // === নতুন সংযোজিত অংশ: ডাইনামিক সাবটাইটেল রোটেটর ফাংশন ===
     const startSubtitleRotation = () => {
         const subtitleEl = document.getElementById('rotating-subtitle');
         if (!subtitleEl) return;
-
-        if (subtitleInterval) {
-            clearInterval(subtitleInterval);
-        }
+        if (subtitleInterval) clearInterval(subtitleInterval);
 
         const subtitles = dataStore.content.heroSubtitles[currentLang];
         let currentIndex = 0;
@@ -325,15 +316,12 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitleInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % subtitles.length;
             subtitleEl.classList.add('fade-out');
-
             setTimeout(() => {
                 subtitleEl.textContent = subtitles[currentIndex];
                 subtitleEl.classList.remove('fade-out');
-            }, 500); // CSS transition এর সাথে সময় মিলান
-
-        }, 5000); // প্রতি ৫ সেকেন্ড পর পরিবর্তন
+            }, 500);
+        }, 5000);
     };
-
 
     const populateAllDynamicContent = () => {
         populateFeatures();
@@ -377,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (container) {
             const data = dataStore.content.gallery[currentLang] || [];
             container.innerHTML = `<div class="gallery-grid">${data.map(item => `
-                <a href="${item.link}" target="_blank" class="gallery-card animate-on-scroll" style="text-decoration: none; color: inherit;">
+                <a href="${item.link}" target="_blank" class="gallery-card animate-on-scroll" style="text-decoration: none;">
                     <h3><i class="fab ${item.icon}"></i> ${item.title}</h3>
                     <p>${item.desc}</p>
                 </a>`).join('')}
@@ -389,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!dom.resourcesList) return;
         const data = dataStore.content.resources[currentLang] || [];
         dom.resourcesList.innerHTML = data.map(item => `
-            <a href="${item.link}" class="resource-item animate-on-scroll" target="_blank">
+            <a href="${item.link}" class="resource-item animate-on-scroll" target="${item.link.startsWith('http') ? '_blank' : '_self'}">
                 <div class="resource-icon"><i class="${item.icon}"></i></div>
                 <div class="resource-content"><h3>${item.title}</h3></div>
             </a>`).join('');
@@ -446,6 +434,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- EVENT LISTENERS ---
     dom.langBtn.addEventListener('click', () => setLanguage(currentLang === 'bn' ? 'en' : 'bn'));
+    
+    // === নতুন সংযোজিত অংশ: Theme Switcher Event Listener ===
+    dom.themeSwitcherBtn.addEventListener('click', () => {
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+    });
+
     dom.mobileMenuBtn.addEventListener('click', () => dom.mainNav.classList.toggle('active'));
     
     if (dom.closeWelcomeBtn) {
@@ -511,11 +507,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- INITIALIZATION ---
+    const preferredTheme = localStorage.getItem('theme') || 'light';
+    setTheme(preferredTheme);
     setLanguage(currentLang);
     
-    updateIncomeTicker(); // পেজ লোড হওয়ার সাথে সাথে ইনকাম দেখান
-    setInterval(updateIncomeTicker, 3600000); // প্রতি ১ ঘণ্টা পর পর আপডেট করুন
-
     if (dom.welcomeModal && !sessionStorage.getItem('welcomeShown')) {
         setTimeout(() => {
             if (dom.welcomeModal) dom.welcomeModal.style.display = 'block';

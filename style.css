@@ -1,12 +1,42 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    /* Main Theme Colors */
+    --primary-color-light: #2c3e50;
+    --secondary-color-light: #3498db;
+    --primary-color-dark: #3498db;
+    --secondary-color-dark: #2c3e50;
+
     --accent-color: #e74c3c;
-    --light-color: #f4f6f9;
-    --dark-color: #1f2937;
-    --text-color: #333;
-    --text-secondary-color: #555;
     --border-radius: 10px;
+
+    /* Light Mode (Default) */
+    --bg-color: #ffffff;
+    --bg-secondary-color: #f4f6f9;
+    --text-primary-color: #333;
+    --text-secondary-color: #555;
+    --card-bg-color: #ffffff;
+    --border-color: #e0e0e0;
+    --header-bg-color: rgba(44, 62, 80, 0.9);
+    --hero-gradient: linear-gradient(135deg, #2c3e50, #34495e);
+    --footer-bg-color: #2c3e50;
+    --footer-text-color: #bdc3c7;
+    --footer-header-color: #ffffff;
+    --mobile-nav-bg: #34495e;
+}
+
+body.dark-mode {
+    /* Dark Mode Variables */
+    --bg-color: #121212;
+    --bg-secondary-color: #1f2937;
+    --text-primary-color: #f4f6f9;
+    --text-secondary-color: #bdc3c7;
+    --card-bg-color: #1f2937;
+    --border-color: #34495e;
+    --header-bg-color: rgba(31, 41, 55, 0.9);
+    --hero-gradient: linear-gradient(135deg, #1f2937, #121212);
+    --footer-bg-color: #1f2937;
+    --footer-text-color: #bdc3c7;
+    --footer-header-color: #f4f6f9;
+    --mobile-nav-bg: #1f2937;
 }
 
 * {
@@ -22,9 +52,10 @@ html {
 body {
     font-family: 'Hind Siliguri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
-    color: var(--text-color);
-    background-color: #ffffff;
+    color: var(--text-primary-color);
+    background-color: var(--bg-color);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -36,7 +67,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: rgba(44, 62, 80, 0.9);
+    background-color: var(--header-bg-color);
     color: white;
     padding: 0.8rem 0;
     position: fixed;
@@ -64,13 +95,11 @@ header {
 }
 
 .logo i {
-    color: var(--secondary-color);
-    margin-right: 10px;
-    transition: transform 0.4s ease-in-out;
+    color: var(--secondary-color-light);
 }
 
-.logo:hover i {
-    transform: rotate(360deg);
+body.dark-mode .logo i {
+    color: var(--primary-color-dark);
 }
 
 nav ul {
@@ -92,24 +121,32 @@ nav ul li a {
     padding: 0.5rem 0;
 }
 
-.lang-switcher-li {
-    margin-left: 2rem;
-}
+.lang-switcher-li { margin-left: 2rem; }
+.theme-switcher-li { margin-left: 0.8rem; }
 
-.lang-btn {
+.lang-btn, .theme-btn {
     background-color: transparent;
     color: white;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color-light);
     padding: 0.4rem 0.9rem;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s;
 }
-
-.lang-btn:hover {
-    background-color: var(--secondary-color);
+.theme-btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+.lang-btn:hover, .theme-btn:hover {
+    background-color: var(--secondary-color-light);
     color: white;
+}
+body.dark-mode .lang-btn, body.dark-mode .theme-btn {
+    border-color: var(--primary-color-dark);
+}
+body.dark-mode .lang-btn:hover, body.dark-mode .theme-btn:hover {
+    background-color: var(--primary-color-dark);
 }
 
 .mobile-menu-btn {
@@ -124,45 +161,24 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #34495e);
+    background: var(--hero-gradient);
     color: white;
     padding: 10rem 0 6rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 60px; /* Adjust based on header height */
+    margin-top: 60px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    min-height: 60px; /* Ensures space for rotating text */
-}
-
-/* === পরিবর্তিত অংশ: সাবটাইটেল অ্যানিমেশনের জন্য === */
-#rotating-subtitle {
-    transition: opacity 0.5s ease-in-out;
-}
-#rotating-subtitle.fade-out {
-    opacity: 0;
-}
-
+.hero-content { position: relative; z-index: 1; }
+.hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; }
+.hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem; min-height: 60px; }
+#rotating-subtitle { transition: opacity 0.5s ease-in-out; }
+#rotating-subtitle.fade-out { opacity: 0; }
 
 .cta-button {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color-light);
     color: white;
     padding: 0.8rem 2.2rem;
     border-radius: 30px;
@@ -173,56 +189,27 @@ nav ul li a {
     cursor: pointer;
     font-size: 1rem;
 }
-
 .cta-button:hover {
     background-color: #2980b9;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(41, 128, 185, 0.3);
 }
-
-/* === পরিবর্তিত অংশ: Stats Ticker সেকশনের নতুন ডিজাইন === */
-.stats-ticker {
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    color: white;
-    padding: 2.5rem 0;
-    text-align: center;
-    border-top: 3px solid #f1c40f;
-    border-bottom: 3px solid #f1c40f;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+body.dark-mode .cta-button {
+    background-color: var(--primary-color-dark);
 }
-.stat-item h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+body.dark-mode .cta-button:hover {
+    background-color: #5dade2;
 }
-.income-figure {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    letter-spacing: 2px;
-}
-
 
 /* General Section Styling */
-section {
-    padding: 5rem 0;
-}
-
-section:nth-of-type(even) {
-    background-color: var(--light-color);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
+section { padding: 5rem 0; }
+section:nth-of-type(even) { background-color: var(--bg-secondary-color); }
+.section-title { text-align: center; margin-bottom: 3rem; }
 .section-title h2 {
     font-size: 2.3rem;
-    color: var(--primary-color);
+    color: var(--text-primary-color);
     margin-bottom: 1rem;
 }
-
 .section-title p {
     color: var(--text-secondary-color);
     max-width: 700px;
@@ -231,68 +218,39 @@ section:nth-of-type(even) {
 }
 
 /* Features Section */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .feature-card {
-    background-color: white;
+    background-color: var(--card-bg-color);
     border-radius: var(--border-radius);
     padding: 2.5rem 2rem;
     text-align: center;
     transition: all 0.3s;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--border-color);
 }
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-}
-
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); }
 .feature-icon {
     font-size: 2.8rem;
-    color: var(--secondary-color);
+    color: var(--secondary-color-light);
     margin-bottom: 1.5rem;
 }
-
+body.dark-mode .feature-icon { color: var(--primary-color-dark); }
+.feature-card h3 { color: var(--text-primary-color); }
+.feature-card p { color: var(--text-secondary-color); }
 
 /* Trust Section */
-.trust-section {
-    background-color: #ffffff;
-}
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-    text-align: center;
-}
+.trust-section { background-color: var(--bg-color); }
+.trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: center; }
 .trust-item i {
     font-size: 3rem;
-    color: var(--secondary-color);
+    color: var(--secondary-color-light);
     margin-bottom: 1.5rem;
 }
-.trust-item h3 {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-.trust-item p {
-    color: var(--text-secondary-color);
-}
-
+body.dark-mode .trust-item i { color: var(--primary-color-dark); }
+.trust-item h3 { font-size: 1.3rem; color: var(--text-primary-color); margin-bottom: 0.5rem; }
+.trust-item p { color: var(--text-secondary-color); }
 
 /* Trading Education Section */
-.education-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
+.education-tabs { display: flex; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 0.5rem; }
 .tab-btn {
     padding: 0.7rem 1.5rem;
     background: none;
@@ -300,58 +258,37 @@ section:nth-of-type(even) {
     border-bottom: 3px solid transparent;
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--dark-color);
+    color: var(--text-secondary-color);
     cursor: pointer;
     transition: all 0.3s;
 }
-
-.tab-btn.active {
-    color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-}
+.tab-btn.active { color: var(--secondary-color-light); border-bottom-color: var(--secondary-color-light); }
+body.dark-mode .tab-btn.active { color: var(--primary-color-dark); border-bottom-color: var(--primary-color-dark); }
 
 .tab-content { display: none; }
 .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-.education-grid, .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
+.education-grid, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
 .education-card, .gallery-card {
-    background-color: white;
+    background-color: var(--card-bg-color);
     border-radius: var(--border-radius);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    border: 1px solid var(--border-color);
 }
-
-.education-card:hover, .gallery-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.education-card h3, .gallery-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-}
+.education-card:hover, .gallery-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+.education-card h3, .gallery-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary-color); display: flex; align-items: center; }
 .education-card h3 i, .gallery-card h3 i {
-    color: var(--secondary-color);
+    color: var(--secondary-color-light);
     margin-right: 10px;
     font-size: 1.2em;
 }
-
-.education-card p, .gallery-card p {
-    color: var(--text-secondary-color);
-    flex-grow: 1;
-}
+body.dark-mode .education-card h3 i, body.dark-mode .gallery-card h3 i { color: var(--primary-color-dark); }
+.education-card p, .gallery-card p { color: var(--text-secondary-color); flex-grow: 1; }
 
 /* Resources Section */
 .resources-list { max-width: 800px; margin: 0 auto; }
@@ -360,96 +297,111 @@ section:nth-of-type(even) {
     align-items: center;
     padding: 1.2rem 1.5rem;
     margin-bottom: 1rem;
-    background-color: white;
+    background-color: var(--card-bg-color);
     border-radius: var(--border-radius);
     transition: all 0.3s;
     text-decoration: none;
-    color: inherit;
-    border: 1px solid #e0e0e0;
+    color: var(--text-primary-color);
+    border: 1px solid var(--border-color);
 }
-.resource-item:hover { background-color: var(--light-color); transform: translateX(10px); }
-.resource-icon { font-size: 1.8rem; color: var(--secondary-color); margin-right: 1.5rem; min-width: 40px; text-align: center; }
+.resource-item:hover { background-color: var(--bg-secondary-color); transform: translateX(10px); }
+.resource-icon { font-size: 1.8rem; color: var(--secondary-color-light); margin-right: 1.5rem; min-width: 40px; text-align: center; }
+body.dark-mode .resource-icon { color: var(--primary-color-dark); }
 
-/* Risk Warning Section */
-.risk-warning {
+/* === পরিবর্তিত অংশ: Risk Warning Section সমাধান === */
+section.risk-warning {
     padding: 5rem 0;
-    background-color: var(--dark-color);
-    color: #f9fafb;
+    background-color: #1f2937;
 }
-
-.risk-warning .section-title h2 { color: white; }
-.risk-warning .section-title p { color: #d1d5db; }
-
+.risk-warning .section-title h2,
+.risk-warning .warning-item h3 {
+    color: #f4f6f9;
+}
+.risk-warning .warning-item p,
+.risk-warning .section-title p {
+    color: #d1d5db;
+}
 .warning-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
 }
-
 .warning-item {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--accent-color);
 }
-
 .warning-item-header {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
-
 .warning-item-icon {
     font-size: 1.5rem;
     color: var(--accent-color);
     margin-right: 1rem;
 }
 
-.warning-item h3 { color: white; font-size: 1.2rem; margin: 0; }
-.warning-item p { color: #d1d5db; }
-
 /* Footer */
-footer { background-color: var(--primary-color); color: #bdc3c7; padding: 4rem 0 2rem; }
+footer { background-color: var(--footer-bg-color); color: var(--footer-text-color); padding: 4rem 0 2rem; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; }
-.footer-column h3 { font-size: 1.3rem; margin-bottom: 1.5rem; color: white; }
+.footer-column h3 { font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--footer-header-color); }
 .footer-column ul { list-style: none; padding: 0; }
-.footer-column ul li a { color: #bdc3c7; text-decoration: none; transition: color 0.3s; }
-.footer-column ul li a:hover { color: white; }
+.footer-column ul li a { color: var(--footer-text-color); text-decoration: none; transition: color 0.3s; }
+.footer-column ul li a:hover { color: var(--primary-color-dark); }
 .contact-icons { display: flex; gap: 1.5rem; }
-.contact-icon-btn { font-size: 1.8rem; cursor: pointer; transition: color 0.3s; background: none; border: none; color: #bdc3c7; padding: 0; }
-.contact-icon-btn:hover { color: var(--secondary-color); }
-
+.contact-icon-btn { font-size: 1.8rem; cursor: pointer; transition: color 0.3s; background: none; border: none; color: var(--footer-text-color); padding: 0; }
+.contact-icon-btn:hover { color: var(--primary-color-dark); }
 .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
 .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; transition: all 0.3s; }
-.social-links a:hover { background-color: var(--secondary-color); }
+.social-links a:hover { background-color: var(--primary-color-dark); }
 .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
-/* Modal Styles */
+/* === পরিবর্তিত অংশ: Modal/Popup স্টাইল সমাধান === */
 .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow-y: auto; background-color: rgba(0,0,0,0.6); animation: fadeInModal 0.3s; }
-.modal-content { background-color: #fefefe; margin: 10% auto; padding: 30px; border: none; width: 90%; max-width: 600px; border-radius: var(--border-radius); box-shadow: 0 5px 20px rgba(0,0,0,0.3); position: relative; }
+.modal-content {
+    background-color: #fefefe; /* Always light background */
+    color: #333; /* Always dark text */
+    margin: 10% auto;
+    padding: 30px;
+    border: none; /* Removed border */
+    width: 90%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
 .close-btn { color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; background: none; border: none; cursor: pointer; }
-.close-btn:hover { color: black; }
-
+.close-btn:hover { color: #000; } /* Always black on hover */
 .welcome-modal .modal-content { text-align: center; }
-.welcome-logo-icon { font-size: 4rem; color: var(--secondary-color); margin-bottom: 1rem; display: inline-block; }
+.welcome-logo-icon { font-size: 4rem; color: var(--secondary-color-light); margin-bottom: 1rem; display: inline-block; }
 
 #contactModalBody { text-align: center; }
-#contactModalBody i { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem; }
-#contactModalBody h3 { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem; }
-#contactModalBody p, #contactModalBody a { font-size: 1.1rem; color: var(--text-secondary-color); word-break: break-all; text-decoration: none; }
+#contactModalBody i { font-size: 3rem; color: var(--secondary-color-light); margin-bottom: 1rem; }
+#contactModalBody h3 { font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+#contactModalBody p, #contactModalBody a { font-size: 1.1rem; color: #555; word-break: break-all; text-decoration: none; }
 #contactModalBody a:hover { text-decoration: underline; }
 
 /* Partner Change Page Styles */
 #partner-change-section { padding-top: 120px; padding-bottom: 5rem; }
 .partner-change-content { max-width: 800px; margin: 2rem auto 0; text-align: center; }
 .partner-change-content .login-button { margin-bottom: 3rem; }
-.info-card { background-color: var(--light-color); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 1.5rem; text-align: left; }
-.info-card h3 { margin-bottom: 1rem; color: var(--primary-color); }
+.info-card { background-color: var(--bg-secondary-color); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 1.5rem; text-align: left; }
+.info-card h3 { margin-bottom: 1rem; color: var(--text-primary-color); }
 .copy-container { display: flex; gap: 10px; }
-.copy-text { flex-grow: 1; padding: 0.7rem 1rem; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; font-size: 1rem; }
-.copy-btn { padding: 0.7rem 1.5rem; background-color: var(--secondary-color); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background-color 0.3s; }
+.copy-text { flex-grow: 1; padding: 0.7rem 1rem; border: 1px solid var(--border-color); border-radius: 5px; background-color: var(--bg-color); font-size: 1rem; color: var(--text-primary-color); }
+.copy-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--secondary-color-light);
+    color: white; border: none; border-radius: 5px; cursor: pointer;
+    font-weight: 600; transition: background-color 0.3s;
+}
 .copy-btn:hover { background-color: #2980b9; }
+body.dark-mode .copy-btn { background-color: var(--primary-color-dark); }
+body.dark-mode .copy-btn:hover { background-color: #5dade2; }
+
 
 /* Animation Classes */
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
@@ -458,18 +410,18 @@ footer { background-color: var(--primary-color); color: #bdc3c7; padding: 4rem 0
 /* Responsive Styles */
 @media (max-width: 992px) {
     .mobile-menu-btn { display: block; }
-    #mainNav { position: absolute; top: 100%; left: 0; width: 100%; background-color: #34495e; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+    #mainNav { position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--mobile-nav-bg); max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
     #mainNav.active { max-height: 500px; }
     nav ul { flex-direction: column; padding: 1rem 0; align-items: stretch; }
     nav ul li { margin: 0; }
-    nav ul li a, .lang-switcher-li { display: block; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-    .lang-btn { width: 50%; margin: 0.5rem auto; display: block; }
+    nav ul li a, .lang-switcher-li, .theme-switcher-li { display: block; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .theme-switcher-li { border-bottom: none; }
+    .lang-btn, .theme-btn { width: 50%; margin: 0.5rem auto; display: block; }
+    .theme-switcher-li { padding: 0 1rem 1rem; }
 }
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
     .modal-content { width: 90%; margin: 20vh auto; }
     .education-grid, .gallery-grid { grid-template-columns: 1fr; }
-    .stat-item h3 {font-size: 1.2rem;}
-    .income-figure {font-size: 2.8rem;}
 }
