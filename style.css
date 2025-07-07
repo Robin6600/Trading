@@ -556,7 +556,7 @@ body.dark-mode .benefit-icon {
 @media (max-width: 992px) {
     .mobile-menu-btn { display: block; }
     #mainNav { position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--mobile-nav-bg); max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
-    #mainNav.active { max-height: 500px; }
+    #mainNav.active { max-height: 100vh; } /* Changed from 500px to 100vh */
     nav ul { flex-direction: column; padding: 1rem 0; align-items: stretch; }
     nav ul li { margin: 0; }
     nav ul li a, .lang-switcher-li, .theme-switcher-li, .premium-nav-item { display: block; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
