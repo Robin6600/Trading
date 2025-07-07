@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav_education: "Education",
                 nav_resources: "Resources",
                 nav_contact: "Contact",
+                nav_premium: "Get Premium Service",
                 hero_title: "Start Trading Today and Earn from Anywhere in the World",
                 create_account_btn: "Create New Account",
                 features_title: "Why Choose SniperTrader?",
@@ -64,6 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 footer_edu_risk: "Risk Management",
                 footer_edu_strategy: "Trading Strategies",
                 footer_edu_psychology: "Market Psychology",
+                // Premium Page Translations
+                premium_title_tag: "Premium Service - Sniper Trader",
+                premium_main_title: "Join Our Premium Service",
+                premium_subtitle: "Get exclusive access to daily signals, live classes, and expert support by joining our premium group.",
+                premium_how_to_join_title: "How to Join",
+                premium_step1_title: "Choose Your Path",
+                premium_step1_option1_title: "For New Users",
+                premium_step1_option1_desc: "If you don't have an Exness account with us, click the button below to create a new one under our partnership.",
+                premium_step1_option2_title: "For Existing Exness Users",
+                premium_step1_option2_desc: "If you already have an Exness account, you must change your partner to join us. Click the button for instructions.",
+                premium_step1_option2_btn: "Change Partner",
+                premium_step2_title: "Confirm Your Account",
+                premium_step2_desc: "After creating or changing your account, contact us via WhatsApp or Telegram with your account number to verify. You will be added to the premium group upon successful verification.",
+                premium_step2_btn: "Contact Us on WhatsApp",
+                premium_benefits_title: "What You Get in the Premium Group"
             },
             bn: {
                 logo_text: "SniperTrader",
@@ -72,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav_education: "এডুকেশন",
                 nav_resources: "রিসোর্স",
                 nav_contact: "যোগাযোগ",
+                nav_premium: "প্রিমিয়াম সার্ভিস",
                 hero_title: "আজই ট্রেডিং শুরু করুন এবং বিশ্বের যেকোনো প্রান্ত থেকে আয় করুন",
                 create_account_btn: "নতুন অ্যাকাউন্ট খুলুন",
                 features_title: "কেন SniperTrader বেছে নিবেন?",
@@ -126,6 +143,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 footer_edu_risk: "রিস্ক ম্যানেজমেন্ট",
                 footer_edu_strategy: "ট্রেডিং স্ট্র্যাটেজি",
                 footer_edu_psychology: "মার্কেট সাইকোলজি",
+                // Premium Page Translations
+                premium_title_tag: "প্রিমিয়াম সার্ভিস - Sniper Trader",
+                premium_main_title: "আমাদের প্রিমিয়াম সার্ভিসে যোগ দিন",
+                premium_subtitle: "আমাদের প্রিমিয়াম গ্রুপে যোগ দিয়ে প্রতিদিনের সিগন্যাল, লাইভ ক্লাস এবং বিশেষজ্ঞ সাপোর্ট পান।",
+                premium_how_to_join_title: "যেভাবে যোগ দেবেন",
+                premium_step1_title: "ধাপ ১: আপনার পথ বেছে নিন",
+                premium_step1_option1_title: "নতুন ব্যবহারকারীদের জন্য",
+                premium_step1_option1_desc: "আপনার যদি আমাদের পার্টনারশিপের অধীনে কোনো Exness অ্যাকাউন্ট না থাকে, তাহলে নিচের বাটনে ক্লিক করে একটি নতুন অ্যাকাউন্ট তৈরি করুন।",
+                premium_step1_option2_title: "বিদ্যমান Exness ব্যবহারকারীদের জন্য",
+                premium_step1_option2_desc: "আপনার যদি ইতিমধ্যে একটি Exness অ্যাকাউন্ট থাকে, তাহলে আমাদের সাথে যোগ দিতে আপনাকে অবশ্যই আপনার পার্টনার পরিবর্তন করতে হবে। নির্দেশাবলীর জন্য নিচের বাটনে ক্লিক করুন।",
+                premium_step1_option2_btn: "পার্টনার পরিবর্তন করুন",
+                premium_step2_title: "ধাপ ২: আপনার অ্যাকাউন্ট নিশ্চিত করুন",
+                premium_step2_desc: "আপনার অ্যাকাউন্ট তৈরি বা পরিবর্তন করার পরে, যাচাইকরণের জন্য আপনার অ্যাকাউন্ট নম্বর সহ WhatsApp বা Telegram-এ আমাদের সাথে যোগাযোগ করুন। সফল যাচাইয়ের পরেই আপনাকে প্রিমিয়াম গ্রুপে যুক্ত করা হবে।",
+                premium_step2_btn: "WhatsApp-এ যোগাযোগ করুন",
+                premium_benefits_title: "প্রিমিয়াম গ্রুপে যা যা পাচ্ছেন"
             }
         },
         content: {
@@ -227,6 +259,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: { icon: 'fas fa-envelope', value: 'sheikhraselrobinofficial.bd@gmail.com', href: 'mailto:sheikhraselrobinofficial.bd@gmail.com' },
                 phone: { icon: 'fas fa-phone', value: '8801769930497', href: 'tel:+8801769930497' },
                 address: { icon: 'fas fa-map-marker-alt', value: 'Radhanagar, lepushipahi Road, Pabna Sadar' }
+            },
+            premiumBenefits: {
+                en: [
+                    { icon: "fas fa-signal", title: "Daily Trading Signals", desc: "Receive high-probability trading signals every day to guide your decisions." },
+                    { icon: "fas fa-chalkboard-teacher", title: "Live Trading Classes", desc: "Participate in live classes where we analyze the market and trade together." },
+                    { icon: "fas fa-lightbulb", title: "Advanced Strategies", desc: "Learn exclusive and advanced trading strategies not available to the public." },
+                    { icon: "fas fa-headset", title: "24/7 Priority Support", desc: "Get your questions answered anytime with our dedicated premium support." }
+                ],
+                bn: [
+                    { icon: "fas fa-signal", title: "দৈনিক ট্রেডিং সিগন্যাল", desc: "আপনার সিদ্ধান্তকে গাইড করতে প্রতিদিন হাই-প্রোবাবিলিটি ট্রেডিং সিগন্যাল গ্রহণ করুন।" },
+                    { icon: "fas fa-chalkboard-teacher", title: "লাইভ ট্রেডিং ক্লাস", desc: "লাইভ ক্লাসে অংশগ্রহণ করুন যেখানে আমরা একসাথে বাজার বিশ্লেষণ এবং ট্রেড করি।" },
+                    { icon: "fas fa-lightbulb", title: "অ্যাডভান্সড স্ট্র্যাটেজি", desc: "বিশেষ এবং উন্নত ট্রেডিং কৌশল শিখুন যা পাবলিকলি পাওয়া যায় না।" },
+                    { icon: "fas fa-headset", title: "২৪/৭ অগ্রাধিকার সাপোর্ট", desc: "আমাদের ডেডিকেটেড প্রিমিয়াম সাপোর্টের মাধ্যমে যেকোনো সময় আপনার প্রশ্নের উত্তর পান।" }
+                ]
             }
         }
     };
@@ -234,7 +280,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = localStorage.getItem('lang') || 'bn';
     let subtitleInterval;
 
-    // === পরিবর্তিত অংশ: DOM Elements with Theme Switcher ===
     const dom = {
         html: document.documentElement,
         body: document.body,
@@ -245,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
         educationSection: document.getElementById('education'),
         resourcesList: document.querySelector('.resources-list'),
         riskWarningContent: document.getElementById('risk-warning-content'),
+        benefitsGrid: document.getElementById('benefits-grid'),
         mobileMenuBtn: document.getElementById('mobileMenuBtn'),
         mainNav: document.getElementById('mainNav'),
         header: document.querySelector('header'),
@@ -258,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contactModalCloseBtn: document.querySelector('#contactModal .close-btn'),
     };
 
-    // === নতুন সংযোজিত অংশ: Theme Management ===
     const setTheme = (theme) => {
         localStorage.setItem('theme', theme);
         dom.body.classList.toggle('dark-mode', theme === 'dark');
@@ -329,6 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
         populateGallery(); 
         populateResources();
         populateRiskWarnings();
+        populatePremiumBenefits();
         observeAnimations();
     };
 
@@ -340,6 +386,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="feature-icon"><i class="${item.icon}"></i></div>
                 <h3>${item.title}</h3>
                 <p>${item.desc}</p>
+            </div>`).join('');
+    };
+    
+    const populatePremiumBenefits = () => {
+        if (!dom.benefitsGrid) return;
+        const data = dataStore.content.premiumBenefits[currentLang] || [];
+        dom.benefitsGrid.innerHTML = data.map(item => `
+            <div class="benefit-card">
+                <i class="${item.icon} benefit-icon"></i>
+                <div class="benefit-content">
+                    <h4>${item.title}</h4>
+                    <p>${item.desc}</p>
+                </div>
             </div>`).join('');
     };
 
@@ -435,7 +494,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- EVENT LISTENERS ---
     dom.langBtn.addEventListener('click', () => setLanguage(currentLang === 'bn' ? 'en' : 'bn'));
     
-    // === নতুন সংযোজিত অংশ: Theme Switcher Event Listener ===
     dom.themeSwitcherBtn.addEventListener('click', () => {
         const currentTheme = localStorage.getItem('theme') || 'light';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -492,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const textToCopy = button.previousElementSibling.value;
             navigator.clipboard.writeText(textToCopy).then(() => {
-                const originalTextKey = button.getAttribute('data-key');
+                const originalTextKey = 'copy_btn_text';
                 const copiedTextKey = 'copied_btn_text';
                 
                 button.textContent = dataStore.translations[currentLang][copiedTextKey];
@@ -507,7 +565,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- INITIALIZATION ---
-    const preferredTheme = localStorage.getItem('theme') || 'light';
+    const preferredTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     setTheme(preferredTheme);
     setLanguage(currentLang);
     
