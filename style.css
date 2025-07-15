@@ -560,8 +560,54 @@ body.dark-mode .turbo-card {
 }
 .turbo-card p {
     color: var(--text-secondary-color);
+    margin-bottom: 1rem;
 }
-
+.styled-list {
+    list-style: none;
+    padding-left: 0;
+}
+.styled-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+.styled-list li::before {
+    content: '\f058'; /* Font Awesome check-circle icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #27ae60; /* A green color */
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.turbo-contact-section {
+    background-color: var(--bg-secondary-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+.turbo-contact-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary-color);
+}
+.turbo-contact-section p {
+    color: var(--text-secondary-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+.whatsapp-btn {
+    background-color: #25D366;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.whatsapp-btn:hover {
+    background-color: #1DAA50;
+}
 
 /* Premium Nav Button Style */
 .premium-nav-item {

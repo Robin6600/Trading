@@ -85,11 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 turbo_title_tag: "Turbo Trading - Sniper Trader",
                 turbo_main_title: "Turbo Trading with Pocket Option",
                 turbo_subtitle: "Enter the world of fast-paced trading and pave your way to success.",
+                turbo_why_choose_title: "Why Choose Pocket Option?",
+                turbo_why_choose_intro: "Pocket Option is a modern and convenient platform for traders. Here you can trade quickly and easily. Some of its special advantages are:",
+                turbo_why_choose_item1: "<strong>Quick Profits:</strong> Opportunity to get attractive returns in just a few minutes of trading.",
+                turbo_why_choose_item2: "<strong>Easy Interface:</strong> Very easy to use for beginners with all necessary tools at your fingertips.",
+                turbo_why_choose_item3: "<strong>Minimum Deposit:</strong> Facility to start trading with a small amount of money, which reduces risk.",
+                turbo_why_choose_item4: "<strong>Demo Account:</strong> Opportunity to practice with virtual funds before investing real money.",
                 turbo_motivation_title: "Mindset for Success",
                 turbo_motivation_desc: "Turbo trading requires quick decisions, but with strategy, not emotion. Every trade is a new opportunity. Learn from losses and let profits build your confidence. Remember, discipline and patience are your greatest weapons.",
                 turbo_strategy_title: "Effective Strategy",
                 turbo_strategy_desc: "Identify support and resistance levels. Trade when the price breaks these levels or bounces off them. Candlestick patterns, like bullish or bearish engulfing, will help you enter at the right time. Using these strategies on short timeframes (1-5 minutes) can yield quick results.",
-                turbo_account_btn: "Create New Account"
+                turbo_account_btn: "Create New Account",
+                turbo_contact_title: "Contact Us for Any Assistance",
+                turbo_contact_desc: "We are always ready for any questions or help related to your trading.",
+                turbo_contact_whatsapp_btn: "Contact on WhatsApp"
             },
             bn: {
                 logo_text: "SniperTrader",
@@ -173,11 +182,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 turbo_title_tag: "টার্বো ট্রেডিং - Sniper Trader",
                 turbo_main_title: "Pocket Option দিয়ে টার্বো ট্রেডিং",
                 turbo_subtitle: "দ্রুত ট্রেডিং এর জগতে প্রবেশ করুন এবং আপনার সাফল্যের পথ তৈরি করুন।",
+                turbo_why_choose_title: "কেন Pocket Option বেছে নেবেন?",
+                turbo_why_choose_intro: "Pocket Option ট্রেডারদের জন্য একটি আধুনিক এবং সুবিধাজনক প্ল্যাটফর্ম। এখানে আপনি দ্রুত এবং সহজে ট্রেড করতে পারবেন। এর কিছু বিশেষ সুবিধা হলো:",
+                turbo_why_choose_item1: "<strong>দ্রুত লাভ:</strong> মাত্র কয়েক মিনিটের ট্রেডে আকর্ষণীয় রিটার্ন পাওয়ার সুযোগ।",
+                turbo_why_choose_item2: "<strong>সহজ ইন্টারফেস:</strong> নতুনদের জন্য ব্যবহার করা খুব সহজ এবং সকল প্রয়োজনীয় টুলস হাতের নাগালে।",
+                turbo_why_choose_item3: "<strong>সর্বনিম্ন ডিপোজিট:</strong> অল্প পরিমাণ অর্থ দিয়ে ট্রেডিং শুরু করার সুবিধা, যা ঝুঁকি কমায়।",
+                turbo_why_choose_item4: "<strong>ডেমো অ্যাকাউন্ট:</strong> আসল টাকা বিনিয়োগ করার আগে ভার্চুয়াল ফান্ড দিয়ে অনুশীলন করার সুযোগ।",
                 turbo_motivation_title: "সাফল্যের জন্য মানসিকতা",
                 turbo_motivation_desc: "টার্বো ট্রেডিংয়ে দ্রুত সিদ্ধান্ত নিতে হয়, কিন্তু আবেগ দিয়ে নয়, কৌশল দিয়ে। প্রতিটি ট্রেড একটি নতুন সুযোগ। লোকসান থেকে শিখুন এবং লাভকে আপনার আত্মবিশ্বাস বাড়াতে দিন। মনে রাখবেন, শৃঙ্খলা এবং ধৈর্যই হলো আপনার সবচেয়ে বড় অস্ত্র।",
                 turbo_strategy_title: "কার্যকরী স্ট্র্যাটেজি",
                 turbo_strategy_desc: "সাপোর্ট এবং রেসিস্ট্যান্স লেভেল চিহ্নিত করুন। যখন প্রাইস এই লেভেলগুলো ভাঙে বা স্পর্শ করে ফিরে আসে, তখন ট্রেড নিন। ক্যান্ডেলস্টিক প্যাটার্ন, যেমন—বুলিশ বা বেয়ারিশ এনগালফিং, আপনাকে সঠিক সময়ে এন্ট্রি নিতে সাহায্য করবে। ছোট টাইমফ্রেমে (১-৫ মিনিট) এই কৌশলগুলো ব্যবহার করে আপনি দ্রুত ফলাফল পেতে পারেন।",
-                turbo_account_btn: "নতুন অ্যাকাউন্ট তৈরি করুন"
+                turbo_account_btn: "নতুন অ্যাকাউন্ট তৈরি করুন",
+                turbo_contact_title: "যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন",
+                turbo_contact_desc: "আপনার ট্রেডিং সম্পর্কিত যেকোনো প্রশ্ন বা সাহায্যের জন্য আমরা সর্বদা প্রস্তুত।",
+                turbo_contact_whatsapp_btn: "WhatsApp-এ যোগাযোগ"
             }
         },
         content: {
@@ -357,7 +375,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (dataStore.translations[lang]?.[key]) {
                  if (el.tagName === 'INPUT' && el.type === 'button') {
                     el.value = dataStore.translations[lang][key];
-                } else {
+                } else if (el.tagName === 'LI') {
+                    el.innerHTML = dataStore.translations[lang][key];
+                }
+                else {
                     el.textContent = dataStore.translations[lang][key];
                 }
             }
