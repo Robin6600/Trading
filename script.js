@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav_education: "Education",
                 nav_resources: "Resources",
                 nav_contact: "Contact",
-                nav_premium: "Get Premium Service",
+                nav_fx_trading: "FX Trading",
+                nav_turbo_trading: "Turbo Trading",
                 hero_title: "Start Trading Today and Earn from Anywhere in the World",
                 create_account_btn: "Create New Account",
                 features_title: "Why Choose SniperTrader?",
@@ -79,7 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 premium_step2_title: "Confirm Your Account",
                 premium_step2_desc: "After creating or changing your account, contact us via WhatsApp or Telegram with your account number to verify. You will be added to the premium group upon successful verification.",
                 premium_step2_btn: "Contact Us on WhatsApp",
-                premium_benefits_title: "What You Get in the Premium Group"
+                premium_benefits_title: "What You Get in the Premium Group",
+                // Turbo Trading Page Translations
+                turbo_title_tag: "Turbo Trading - Sniper Trader",
+                turbo_main_title: "Turbo Trading with Pocket Option",
+                turbo_subtitle: "Enter the world of fast-paced trading and pave your way to success.",
+                turbo_motivation_title: "Mindset for Success",
+                turbo_motivation_desc: "Turbo trading requires quick decisions, but with strategy, not emotion. Every trade is a new opportunity. Learn from losses and let profits build your confidence. Remember, discipline and patience are your greatest weapons.",
+                turbo_strategy_title: "Effective Strategy",
+                turbo_strategy_desc: "Identify support and resistance levels. Trade when the price breaks these levels or bounces off them. Candlestick patterns, like bullish or bearish engulfing, will help you enter at the right time. Using these strategies on short timeframes (1-5 minutes) can yield quick results.",
+                turbo_account_btn: "Create New Account"
             },
             bn: {
                 logo_text: "SniperTrader",
@@ -88,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav_education: "এডুকেশন",
                 nav_resources: "রিসোর্স",
                 nav_contact: "যোগাযোগ",
-                nav_premium: "প্রিমিয়াম সার্ভিস",
+                nav_fx_trading: "এফএক্স ট্রেডিং",
+                nav_turbo_trading: "টার্বো ট্রেডিং",
                 hero_title: "আজই ট্রেডিং শুরু করুন এবং বিশ্বের যেকোনো প্রান্ত থেকে আয় করুন",
                 create_account_btn: "নতুন অ্যাকাউন্ট খুলুন",
                 features_title: "কেন SniperTrader বেছে নিবেন?",
@@ -157,7 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 premium_step2_title: "ধাপ ২: আপনার অ্যাকাউন্ট নিশ্চিত করুন",
                 premium_step2_desc: "আপনার অ্যাকাউন্ট তৈরি বা পরিবর্তন করার পরে, যাচাইকরণের জন্য আপনার অ্যাকাউন্ট নম্বর সহ WhatsApp বা Telegram-এ আমাদের সাথে যোগাযোগ করুন। সফল যাচাইয়ের পরেই আপনাকে প্রিমিয়াম গ্রুপে যুক্ত করা হবে।",
                 premium_step2_btn: "WhatsApp-এ যোগাযোগ করুন",
-                premium_benefits_title: "প্রিমিয়াম গ্রুপে যা যা পাচ্ছেন"
+                premium_benefits_title: "প্রিমিয়াম গ্রুপে যা যা পাচ্ছেন",
+                // Turbo Trading Page Translations
+                turbo_title_tag: "টার্বো ট্রেডিং - Sniper Trader",
+                turbo_main_title: "Pocket Option দিয়ে টার্বো ট্রেডিং",
+                turbo_subtitle: "দ্রুত ট্রেডিং এর জগতে প্রবেশ করুন এবং আপনার সাফল্যের পথ তৈরি করুন।",
+                turbo_motivation_title: "সাফল্যের জন্য মানসিকতা",
+                turbo_motivation_desc: "টার্বো ট্রেডিংয়ে দ্রুত সিদ্ধান্ত নিতে হয়, কিন্তু আবেগ দিয়ে নয়, কৌশল দিয়ে। প্রতিটি ট্রেড একটি নতুন সুযোগ। লোকসান থেকে শিখুন এবং লাভকে আপনার আত্মবিশ্বাস বাড়াতে দিন। মনে রাখবেন, শৃঙ্খলা এবং ধৈর্যই হলো আপনার সবচেয়ে বড় অস্ত্র।",
+                turbo_strategy_title: "কার্যকরী স্ট্র্যাটেজি",
+                turbo_strategy_desc: "সাপোর্ট এবং রেসিস্ট্যান্স লেভেল চিহ্নিত করুন। যখন প্রাইস এই লেভেলগুলো ভাঙে বা স্পর্শ করে ফিরে আসে, তখন ট্রেড নিন। ক্যান্ডেলস্টিক প্যাটার্ন, যেমন—বুলিশ বা বেয়ারিশ এনগালফিং, আপনাকে সঠিক সময়ে এন্ট্রি নিতে সাহায্য করবে। ছোট টাইমফ্রেমে (১-৫ মিনিট) এই কৌশলগুলো ব্যবহার করে আপনি দ্রুত ফলাফল পেতে পারেন।",
+                turbo_account_btn: "নতুন অ্যাকাউন্ট তৈরি করুন"
             }
         },
         content: {

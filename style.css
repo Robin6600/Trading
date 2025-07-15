@@ -532,9 +532,40 @@ body.dark-mode .benefit-icon {
     line-height: 1.6;
 }
 
+
+/* Turbo Trading Page Styles */
+#turbo-trading-section {
+    padding-top: 120px;
+    padding-bottom: 5rem;
+}
+.turbo-content {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    display: grid;
+    gap: 2rem;
+}
+.turbo-card {
+    background-color: var(--bg-secondary-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--secondary-color-light);
+}
+body.dark-mode .turbo-card {
+    border-left-color: var(--primary-color-dark);
+}
+.turbo-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary-color);
+}
+.turbo-card p {
+    color: var(--text-secondary-color);
+}
+
+
 /* Premium Nav Button Style */
 .premium-nav-item {
-    margin-left: 1.5rem;
+    margin-left: 1rem; /* Adjusted margin */
     display: flex;
     align-items: center;
 }
@@ -546,6 +577,7 @@ body.dark-mode .benefit-icon {
     font-weight: 600;
     transition: all 0.3s;
     text-decoration: none;
+    white-space: nowrap; /* Prevents button text from wrapping */
 }
 .cta-nav-button:hover {
     background-color: #c0392b;
@@ -553,6 +585,12 @@ body.dark-mode .benefit-icon {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    nav ul li { margin-left: 1rem; } /* Reduce spacing on smaller desktops */
+    .premium-nav-item { margin-left: 0.5rem; }
+    .lang-switcher-li { margin-left: 1rem; }
+}
+
 @media (max-width: 992px) {
     .mobile-menu-btn { display: block; }
     #mainNav { position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--mobile-nav-bg); max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
@@ -561,7 +599,7 @@ body.dark-mode .benefit-icon {
     nav ul li { margin: 0; }
     nav ul li a, .lang-switcher-li, .theme-switcher-li, .premium-nav-item { display: block; padding: 1rem; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     .premium-nav-item { padding: 0.5rem 1rem; }
-    .cta-nav-button { display: inline-block; width: auto; }
+    .cta-nav-button { display: inline-block; width: auto; margin-top: 0.5rem; margin-bottom: 0.5rem; }
     .theme-switcher-li { border-bottom: none; }
     .lang-btn, .theme-btn { width: 50%; margin: 0.5rem auto; display: block; }
     .theme-switcher-li { padding: 0 1rem 1rem; }
